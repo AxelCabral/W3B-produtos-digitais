@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express();
-const PORT = 3000;
+const PORT = 3007;
 
 // Caminho absoluto para os arquivos estáticos
 const __filename = fileURLToPath(import.meta.url);

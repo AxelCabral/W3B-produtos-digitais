@@ -1,0 +1,12 @@
+RewriteOptions inherit
+RewriteEngine On  
+# enables url rewriting
+
+RewriteCond %{REQUEST_FILENAME} !-d  
+# if requested uri is not directory (!-d)
+
+RewriteCond %{REQUEST_FILENAME}\.html -f 
+# and if there is a file named URI+'.html' (-f)
+
+RewriteRule ^(.*)$ $1.html 
+# then if there is any thing in uri then rewrite it as uri+'.html'
