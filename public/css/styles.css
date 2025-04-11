@@ -564,6 +564,12 @@ nav a:hover {
   border: none;
   outline: none;
   width: 85%;
+  border: 2px solid var(--bg-card);
+  margin-bottom: 40px;
+}
+
+.activation-form input[type="text"]:focus {
+  border: 2px solid var(--secondary);
 }
 
 .not-found {
@@ -588,6 +594,31 @@ nav a:hover {
   background-clip: inherit;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.activation-form .error-msg {
+  color: #e63946;
+  font-size: 0.95em;
+  min-height: 0.95em;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.activation-form input.error {
+  border: 2px solid #e63946;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+input.error.shake {
+  animation: shake 0.3s ease;
 }
 
 @media (max-width: 1800px) {
