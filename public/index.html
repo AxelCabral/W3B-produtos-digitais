@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/styles.css">
   <title>W3B - Produtos Digitais</title>
+  <meta name="description" content="Catálogo de produtos digitais para venda" />
+  <meta name="author" content="W3B - Produtos Digitais" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" sizes="64x64" href="/assets/W3B-logo-minimalist.webp" type="image/png">
 </head>
+
 <body>
   <header>
-    <img src="logo.png" alt="Logo da W3B" class="logo" />
+    <a href="index.html">
+      <img src="assets/W3B_-_logo-transparent.webp" alt="Logo da W3B" class="logo-header" />
+    </a>
     <nav>
       <a href="index.html">Catálogo</a>
       <a href="ativacao.html">Ativação de Produto</a>
@@ -16,36 +24,52 @@
   </header>
 
   <section class="catalogo">
-    <div class="produto">
-      <img src="produto1.jpg" alt="Produto 1" />
-      <div class="produto-info">
-        <h3>Digital PRO</h3>
-        <p>Pacote de templates para sites "No Code", WordPress + Elementor PRO, conteúdo digital para vendas, PLR's e mais. Tudo que você precisar para fazer dinheiro online, siga nosso guia disponível na própria página do produto e começe hoje mesmo a montar sua estratégia.</p>
-        <p class="preco">R$ 9,99</p>
-        <a href="./store/digital-pro/index.html" class="botao-comprar">Adquirir</a>
+    <div class="container">
+      <div class="catalogo-header">
+        <h2>Catálogo de Produtos</h2>
+        <p>Os melhores pacotes de conteúdo digital, você encontra aqui!</p>
       </div>
-    </div>
-    <div class="produto">
-      <img src="produto2.jpg" alt="Produto 2" />
-      <div class="produto-info">
-        <h3>Biblioteca W3B</h3>
-        <p>Pacote de livros em PDF com milhares de livros à disposição, com muitas variedades de gêneros, para promover a leitura e o melhor, tudo isso por um valor super acessível.</p>
-        <p class="preco">R$ 9,99</p>
-        <div class="catalogo-botao">
-          <a href="adquirir2.html" class="botao-comprar">Adquirir</a>
+      <div class="catalogo-list">
+        <div class="product">
+          <h3>Pacote Digital Pro</h3>
+          <a href="./store/digital-pro/index.html" class="product-link">
+            <div class="product-card" id="digital-pro"></div>
+          </a>
+          <p>Um pacote de templates e conteúdos para fazer dinheiro no meio digital.</p>
+          <div class="product-bottom">
+            <h4>R$9,99</h4>
+            <a href="./store/digital-pro/index.html" class="product-link">
+              <button>Ver Produto</button>
+            </a>
+          </div>
+        </div>
+        <div class="product">
+          <h3>Pacote Biblioteca W3B</h3>
+          <a href="#" class="product-link">
+            <div class="product-card" id="biblioteca-w3b"></div>
+          </a>
+          <p>Um pacote com 20 mil livros, de diferentes gêneros e classificações.</p>
+          <div class="product-bottom">
+            <h4>EM BREVE</h4>
+            <a href="#" class="product-link">
+              <button style="background-color: rgb(87, 5, 5); border: 1px solid red;">Indisponível</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sobre">
-    <img src="logo.png" alt="Logo da W3B" />
-    <p>A W3B é uma empresa especializada na criação e distribuição de infoprodutos e soluções digitais voltadas para entretenimento, meios profissionais e empresas que buscam eficiência e inovação. Nossa missão é transformar ideias em produtos acessíveis, buscando sempre fornecer os melhores produtos digitais do mercado.</p>
-  </section>
-
   <footer>
-    <p>Copyright © 2025. Todos os direitos reservados | contato@w3bprodutosdigitais.com</p>
-    <img src="logo.png" alt="Logo da W3B" />
+    <div class="container" style="margin-bottom: 0px;">
+      <div class="footer-content">
+        <p>Copyright &copy; 2025. Todos os direitos reservados | contato@w3bprodutosdigitais.com</p>
+        <img src="../../assets/W3B_-_logo-transparent.webp" style="margin-top: 10px;" width="150px" alt="Logo da W3B">
+      </div>
+    </div>
   </footer>
 </body>
+<script src="plugins/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+
 </html>

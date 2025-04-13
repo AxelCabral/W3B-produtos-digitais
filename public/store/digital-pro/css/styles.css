@@ -113,7 +113,7 @@ nav a:hover {
 @media (max-width: 500px) {
   .btn-primary {
     padding: 20px 40px;
-    font-size: 1.55rem;
+    font-size: 1.15rem;
   }
 }
 
