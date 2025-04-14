@@ -28,7 +28,8 @@ app.use(limiter);
 // Chaves dos conteúdos
 const contents = {
   'JSKDHH28AA12KJHS009S': 'product-digital-pro/digitalpropack-KSHDB89172JG.html', //Digital pro (Pacote PRO)
-  'U7221SKSNNBAGF10PIU': 'digitalpropack2-LAJDSKJD9711A' //Digital pro (Pacote Elite)
+  'U7221SKSNNBAGF10PIU': 'product-digital-pro/digitalpropack-AHSLAKDSJD98Q.html', //Digital pro (Pacote Gold)
+  'LKPPA52I9O0A1L6LL3CM': 'product-digital-pro/digitalpropack-90002711AHGS0.html' //Digital pro (Pacote Elite)
 }
 
 // Endpoint para liberar acesso ao conteúdo por chave
