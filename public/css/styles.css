@@ -132,7 +132,15 @@ nav a:hover {
   margin-bottom: 3rem;
 }
 
-.catalogo-header h2, .product h3 {
+.product-content-header {
+  text-align: start;
+  margin-left: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.catalogo-header h2, .product h3, .product-content-header h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   background: var(--gradient);
@@ -290,7 +298,7 @@ nav a:hover {
   justify-content: center;
 }
 
-.not-found h1{
+.not-found h1, .content-title h1{
   font-size: 4.0rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -299,6 +307,58 @@ nav a:hover {
   background-clip: inherit;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.content-title h1 {
+  font-size: 2.4rem;
+}
+
+.content-list {
+  list-style: none;
+  padding: 15px;
+}
+
+.content-list li {
+  margin-bottom: 20px;
+}
+
+.content-list a{
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 22px;
+}
+
+.content-list a{
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 22px;
+}
+
+.content-list a img{
+  margin-bottom: 5px;
+}
+
+.content-item {
+  background: var(--text-dark);
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bonus {
+  background: #fcf38b;
+}
+
+.bonus a{
+  color: var(--text-darker);
 }
 
 .activation-form .error-msg {
@@ -311,6 +371,13 @@ nav a:hover {
 
 .activation-form input.error {
   border: 2px solid #e63946;
+}
+
+.bonus-separator {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #fcf38b;
 }
 
 @keyframes shake {
@@ -326,6 +393,11 @@ input.error.shake {
   animation: shake 0.3s ease;
 }
 
+.product-content {
+  padding: 6rem 0;
+  background: radial-gradient(circle at center, rgba(0, 225, 255, 0.1) 0%, transparent 70%);
+}
+
 @media (max-width: 1800px) {
   .footer-content p{
     font-size: 1.2em;
@@ -334,7 +406,11 @@ input.error.shake {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .catalogo {
+  .product-content-header h2{
+    font-size: 2rem;
+  }
+
+  .catalogo, .product-content {
     padding: 1rem 0;
   }
 
@@ -390,5 +466,15 @@ input.error.shake {
 
   nav a {
     margin-left: 1rem;
+  }
+}
+
+@media (max-width: 538px) {
+  .content-list a{
+    font-size: 1.1rem;
+  }
+
+  .product-content-header {
+    margin-bottom: 0;
   }
 }
