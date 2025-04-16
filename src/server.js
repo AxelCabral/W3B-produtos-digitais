@@ -1,5 +1,6 @@
 import express from 'express';
 import rateLimit from 'express-rate-limit';
+import fs from 'fs';
 import helmet from 'helmet';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -14,6 +15,22 @@ const __dirname = path.dirname(__filename);
 // Middleware para servir arquivos estáticos e JSON
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
+
+// Middleware para servir arquivos .html ao acessar URLs sem extensão
+app.use(async (req, res, next) => {
+  if (req.method !== 'GET') return next();
+
+  const requestedPath = req.path.endsWith('/') ? req.path.slice(0, -1) : req.path;
+  const htmlPath = path.join(__dirname, '../public', `${requestedPath}.html`);
+
+  try {
+    // Verifica se o arquivo existe
+    await fs.promises.access(htmlPath);
+    return res.sendFile(htmlPath);
+  } catch (err) {
+    return next();
+  }
+});
 
 app.use(helmet());
 
